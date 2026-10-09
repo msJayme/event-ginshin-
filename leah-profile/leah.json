@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "fanNotice": "Fan made character profile. Not affiliated with any game studio."
+  },
+  "event": {
+    "name": "Whispers of the Karst",
+    "type": "Limited Character Event",
+    "startsAt": "2026-10-10T00:00:00+08:00",
+    "endsAt": "2026-10-31T23:59:59+08:00",
+    "timezoneLabel": "UTC+8 Manila and Liyue time",
+    "tagline": "Some people carry a vision. She carries something older."
+  },
+  "character": {
+    "name": "Leah",
+    "nameHan": "莉娅",
+    "nameRomanized": "Lì Yà",
+    "title": "Keeper of Old Whispers",
+    "rarity": 5,
+    "quote": "The mountains have seen many travelers... but few truly hear what they whisper.",
+    "epigraph": "Some paths are not meant to be walked alone.",
+    "bio": [
+      "A quiet woman who often lingers near the slopes of Jueyun Karst. She is well versed in ancient legends, history, and the movement of the mountains.",
+      "Though she speaks little, her words carry weight, and those who meet her feel as if they have known her in another life."
+    ],
+    "facts": [
+      { "label": "Affiliation", "value": "Liyue Harbor" },
+      { "label": "Occupation", "value": "Scholar and Lorekeeper" },
+      { "label": "Vision", "value": "None", "note": "Adeptus affiliated?" },
+      { "label": "Weapon", "value": "Catalyst" },
+      { "label": "Constellation", "value": "Lapis Scriptum" },
+      { "label": "Birthday", "value": "Not yet revealed" }
+    ],
+    "likes": [
+      "Ancient books and artifacts",
+      "Quiet places like mountains and lakes",
+      "Tea, moonlight, and rain",
+      "The sound of the wind",
+      "Kind people",
+      "Meaningful conversations"
+    ],
+    "dislikes": [
+      "Loud crowds",
+      "Rude or arrogant people",
+      "Waste and dishonesty",
+      "Spicy food, it makes her sick",
+      "Being interrupted while reading"
+    ]
+  },
+  "dialogue": {
+    "start": "intro",
+    "nodes": {
+      "intro": {
+        "text": "The mountains have seen many travelers... but few truly hear what they whisper.",
+        "choices": [
+          { "label": "Where are you from?", "next": "origin" },
+          { "label": "You seem to know a lot about this place...", "next": "lore" },
+          { "label": "May I ask your name?", "next": "name" }
+        ]
+      },
+      "origin": {
+        "text": "Liyue Harbor, if a home must have a name. In your world, I hear people say my mountains stand in Hunan, and my river runs through Guilin.",
+        "choices": [
+          { "label": "You know about my world?", "next": "earth" },
+          { "label": "May I ask your name?", "next": "name", "ifNotRevealed": true },
+          { "label": "I should get going.", "next": "farewell" }
+        ]
+      },
+      "lore": {
+        "text": "Books remember what people forget. I read the old ones, and the mountains correct my mistakes.",
+        "choices": [
+          { "label": "Where are you from?", "next": "origin" },
+          { "label": "May I ask your name?", "next": "name", "ifNotRevealed": true },
+          { "label": "I should get going.", "next": "farewell" }
+        ]
+      },
+      "earth": {
+        "text": "Only what the wind brings me. Tall stone pillars wrapped in mist, a green tea picked near a lake, a festival where everyone looks up at the same moon. It sounds like home.",
+        "choices": [
+          { "label": "Show me those places.", "next": "earthLink", "action": "scrollWorlds" },
+          { "label": "I should get going.", "next": "farewell" }
+        ]
+      },
+      "earthLink": {
+        "text": "I wrote them down for you. Look at the field notes below, Traveler.",
+        "choices": [
+          { "label": "Start over", "next": "intro" }
+        ]
+      },
+      "name": {
+        "text": "Leah. Some paths are not meant to be walked alone, so I suppose you should know what to call me.",
+        "reveal": true,
+        "choices": [
+          { "label": "Where are you from?", "next": "origin" },
+          { "label": "You seem to know a lot about this place...", "next": "lore" },
+          { "label": "I should get going.", "next": "farewell" }
+        ]
+      },
+      "farewell": {
+        "text": "Maybe next time... Traveler.",
+        "choices": [
+          { "label": "Talk again", "next": "intro" }
+        ]
+      }
+    }
+  },
+  "worlds": [
+    {
+      "game": "Jueyun Karst",
+      "real": "Zhangjiajie, Hunan, China",
+      "fact": "Thousands of sandstone pillars rise out of the mist here. The area is part of Wulingyuan, a UNESCO World Heritage Site since 1992.",
+      "tag": "Mountains"
+    },
+    {
+      "game": "Liyue Harbor",
+      "real": "Guilin and the Li River, Guangxi",
+      "fact": "Limestone karst peaks line the river. The view is printed on the back of the 20 yuan banknote.",
+      "tag": "River"
+    },
+    {
+      "game": "Her evening tea",
+      "real": "Longjing tea, Hangzhou",
+      "fact": "Also called Dragon Well. A pan fired green tea grown in the hills around West Lake.",
+      "tag": "Tea"
+    },
+    {
+      "game": "Moonlight on the terrace",
+      "real": "Mid Autumn Festival",
+      "fact": "Held on the 15th day of the 8th lunar month. Families share mooncakes and look at the full moon together.",
+      "tag": "Moonlight"
+    },
+    {
+      "game": "Rain she waits for",
+      "real": "Plum rain season",
+      "fact": "Meiyu brings steady early summer rain to the Yangtze region, usually around June and July.",
+      "tag": "Rain"
+    },
+    {
+      "game": "Her swaying hairpin",
+      "real": "Buyao hair ornament",
+      "fact": "The name means step sway. Dangling ornaments move with every step, a style worn in China since ancient times.",
+      "tag": "Ornament"
+    }
+  ],
+  "commissions": [
+    { "id": "tea", "title": "Brew a cup of tea and drink it slowly", "reward": 1 },
+    { "id": "read", "title": "Read 10 pages of any book", "reward": 1 },
+    { "id": "wind", "title": "Step outside and listen to the wind for one minute", "reward": 1 },
+    { "id": "kind", "title": "Have one kind conversation today", "reward": 1 }
+  ],
+  "commissionReward": {
+    "title": "Secret voice line unlocked",
+    "text": "You actually did all of it? Then the mountains were right about you. Come back tomorrow, Traveler. I will save you a cup."
+  },
+  "wishes": [
+    { "rarity": 5, "title": "About Herself", "text": "Some people carry a vision. I carry something older, and much heavier to explain." },
+    { "rarity": 5, "title": "About the Mountains", "text": "Stand still long enough and the karst will tell you its age. Most people leave before it finishes." },
+    { "rarity": 4, "title": "About Tea", "text": "Water a little below boiling. Patience a little above what you think you have." },
+    { "rarity": 4, "title": "About Rain", "text": "Rain is the only visitor who never interrupts my reading." },
+    { "rarity": 4, "title": "About Crowds", "text": "Too many voices and I cannot hear the wind. I hope you understand why I sit at the edge." },
+    { "rarity": 5, "title": "About the Traveler", "text": "You feel familiar. Perhaps we met in another life. Perhaps we will again." },
+    { "rarity": 4, "title": "About Spicy Food", "text": "No. Absolutely not. Not even a little." },
+    { "rarity": 4, "title": "About Books", "text": "Close a book gently. Someone spent years making it open for you." }
+  ],
+  "gallery": [
+    { "src": "images/leah-closeup.jpg", "alt": "Leah close up with a white flower hairpin and gold tassels", "caption": "Golden hour" },
+    { "src": "images/leah-face-1.jpg", "alt": "Leah looking softly at the viewer", "caption": "Calm" },
+    { "src": "images/leah-face-2.jpg", "alt": "Leah smiling with her eyes closed", "caption": "Content" },
+    { "src": "images/leah-face-3.jpg", "alt": "Leah in profile looking to the side", "caption": "Distant" },
+    { "src": "images/leah-chibi.jpg", "alt": "Chibi version of Leah", "caption": "Maybe next time" }
+  ]
+}
